@@ -10,4 +10,4 @@ COPY requirements.txt ./
 COPY main.py ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "-m", "--app", "main.py", "run", "--host=0.0.0.0", "--port=${PORT_ENV}" ]
+CMD [ "python", "-m", "flask", "--app", "main.py", "run", "--host=0.0.0.0"]

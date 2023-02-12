@@ -9,5 +9,6 @@ WORKDIR ${WD_PATH}
 COPY requirements.txt ./
 COPY main.py ./
 RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE ${PORT_ENV}
 
 CMD [ "python", "-m", "flask", "--app", "main.py", "run", "--host=0.0.0.0"]
